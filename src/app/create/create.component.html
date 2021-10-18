@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-7 mt-5">
+            <label for="long-url"><b style="color: #EE6123; margin-right:20px; font-size: 25px;">Long URL</b></label>
+            <input required type="url" id="long-url" class="mb-2 ml-3" placeholder="Paste URL here"
+                [(ngModel)]="longUrl">
+            <button class="button btn btn-sm" style="background-color: #EE6123; color:white; margin-left:20px;"
+                (click)="generate()">Generate</button>
+            <div>
+                <h6 style="color: #EE6123; margin-top:20px; font-size: 25px;"><b>Short URL</b></h6><a href="{{longUrl}}"
+                    target="_blank">{{shortUrl}}</a>
+            </div>
+            <div>
+               <a routerLink="/list"><button class="button btn btn-sm" style="background-color: #EE6123; color:white; margin-top:40px;">View all Generated URLs</button></a>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <img src="/assets/img/bitly.jpg" height="100%" class="mt-4">
+        </div>
+    </div>
+</div>
